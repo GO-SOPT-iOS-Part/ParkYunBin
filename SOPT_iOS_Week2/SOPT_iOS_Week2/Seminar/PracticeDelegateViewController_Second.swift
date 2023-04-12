@@ -25,7 +25,7 @@ final class PracticeDelegateViewController_Second: UIViewController {
     private lazy var countLabel = UILabel().then {
         $0.text = "횟수는?"
         $0.textColor = .orange
-        $0.font = .systemFont(ofSize: 14)
+        $0.font = .systemFont(ofSize: 20)
     }
     
     private lazy var pushButton = UIButton().then {
