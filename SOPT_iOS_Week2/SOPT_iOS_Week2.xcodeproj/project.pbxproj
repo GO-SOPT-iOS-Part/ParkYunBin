@@ -30,6 +30,7 @@
 		05B202A929E6812E0042060C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202A829E6812E0042060C /* SignInView.swift */; };
 		05B202AB29E686A00042060C /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202AA29E686A00042060C /* UIButton+.swift */; };
 		05B202AD29E68A0D0042060C /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202AC29E68A0D0042060C /* UIStackView+.swift */; };
+		05B202AF29EAA9780042060C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202AE29EAA9780042060C /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		05B202A829E6812E0042060C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		05B202AA29E686A00042060C /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		05B202AC29E68A0D0042060C /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		05B202AE29EAA9780042060C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				05B2029529E42ED90042060C /* SignInViewController.swift */,
+				05B202AE29EAA9780042060C /* WelcomeViewController.swift */,
 			);
 			path = VIewController;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				05B2029229E42CE10042060C /* UIView+.swift in Sources */,
 				05B2027E29E146FD0042060C /* PracticeDelegateViewController_First.swift in Sources */,
 				05B2029629E42ED90042060C /* SignInViewController.swift in Sources */,
+				05B202AF29EAA9780042060C /* WelcomeViewController.swift in Sources */,
 				05B202A929E6812E0042060C /* SignInView.swift in Sources */,
 				05B202AD29E68A0D0042060C /* UIStackView+.swift in Sources */,
 				05B202AB29E686A00042060C /* UIButton+.swift in Sources */,

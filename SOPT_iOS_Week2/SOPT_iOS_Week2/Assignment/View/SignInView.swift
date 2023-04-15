@@ -27,7 +27,7 @@ class SignInView: UIView {
     
     // FIXME: clearButton의 이미지를 변경하는 코드를 어떻게 깔끔하게 쓰지요,,,?!
     
-    private lazy var idTextField: UITextField = {
+    lazy var idTextField: UITextField = {
         let textField = UITextField()
         if let clearButton = textField.value(forKeyPath: "_clearButton") as? UIButton {
             clearButton.setImage(UIImage(named: "remove.svg"), for: .normal)
@@ -44,23 +44,18 @@ class SignInView: UIView {
         return textField
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        if let clearButton = textField.value(forKeyPath: "_clearButton") as? UIButton {
-            clearButton.setImage(UIImage(named: "remove.svg"), for: .normal)
-        }
         textField.placeholder = "비밀번호"
         textField.font = .semiBold(size: 15)
         textField.backgroundColor = .gray4
         textField.textColor = .gray2
+        textField.isSecureTextEntry = true
         textField.autocapitalizationType = .none
-        textField.setPlaceholderColor(.gray2)
-        textField.setLeftPaddingPoints(22)
-        textField.clearButtonMode = .whileEditing
         textField.borderStyle = .roundedRect
         textField.rightView?.frame = CGRect(x: 0, y: 0, width: 60, height: 30)
-//        textField.addRightImage(image: UIImage(named: "eye-slash.svg")!)
-        
+        textField.setPlaceholderColor(.gray2)
+        textField.setLeftPaddingPoints(22)
         return textField
     }()
     
@@ -73,6 +68,7 @@ class SignInView: UIView {
         button.backgroundColor = .black
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.gray4.cgColor
+        button.isEnabled = false
         return button
     }()
     
@@ -131,6 +127,21 @@ class SignInView: UIView {
         return stackView
     }()
     
+    lazy var removeButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "remove.svg"), for: .normal)
+        button.isHidden = true
+        return button
+    }()
+    
+    lazy var securityButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "eye-slash.png"), for: .normal)
+        button.isUserInteractionEnabled = true
+        button.isHidden = true
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -144,15 +155,16 @@ class SignInView: UIView {
     // MARK: - Functions
     
     func configureUI() {
-        clearButtonView.addSubview(clearButton)
-        rightView.addSubview(imageView)
-        addSubviews(backButton,
-                    loginLabel,
-                    idTextField,
-                    passwordTextField,
-                    loginButton,
-                    findAccountStackView,
-                    makeAccountStackView)
+        
+        self.addSubviews(backButton,
+                         loginLabel,
+                         idTextField,
+                         passwordTextField,
+                         loginButton,
+                         findAccountStackView,
+                         makeAccountStackView,
+                         removeButton,
+                         securityButton)
     }
     
     func setLayout() {
@@ -201,6 +213,18 @@ class SignInView: UIView {
         seperateBar.snp.makeConstraints { make in
             make.height.equalTo(12)
             make.width.equalTo(1)
+        }
+        
+        securityButton.snp.makeConstraints { make in
+            make.size.equalTo(20)
+            make.trailing.equalTo(passwordTextField).offset(-20)
+            make.centerY.equalTo(passwordTextField)
+        }
+        
+        removeButton.snp.makeConstraints { make in
+            make.size.equalTo(20)
+            make.trailing.equalTo(passwordTextField).offset(-56)
+            make.centerY.equalTo(passwordTextField)
         }
     }
 }

@@ -21,13 +21,6 @@ extension UITextField {
         self.rightViewMode = .always
     }
     
-    func addRightImage(image:UIImage) {
-        let rightimage = UIImageView(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
-        rightimage.image = image
-        self.rightView = rightimage
-        self.rightViewMode = .always
-    }
-    
     func setPlaceholderColor(_ placeholderColor: UIColor) { //placeholder 색상 변경
             attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                        attributes: [.foregroundColor: placeholderColor,
