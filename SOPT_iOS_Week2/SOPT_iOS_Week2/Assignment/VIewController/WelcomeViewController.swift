@@ -7,7 +7,7 @@
 
 import UIKit
 
-import SnapKit
+import SnapKit 
 
 class WelcomeViewController: UIViewController {
     
@@ -80,6 +80,10 @@ class WelcomeViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(52)
         }
+    }
+    
+    func setUserName(name: String) {
+        username = name
     }
     
     func setNavigationBar() {

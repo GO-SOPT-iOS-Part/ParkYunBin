@@ -52,7 +52,6 @@ class SignInViewController: UIViewController {
     
     @objc
     func editIDTextField(sender: UITextField) {
-                
         if sender.text?.isEmpty == true {
             isIDTextFieldFull = false
             checkTextField()
@@ -64,7 +63,6 @@ class SignInViewController: UIViewController {
     
     @objc
     func editPasswordTextField(sender: UITextField) {
-                
         if sender.text?.isEmpty == true {
             signInView.securityButton.isHidden = true
             signInView.removeButton.isHidden = true
@@ -91,20 +89,10 @@ class SignInViewController: UIViewController {
     
     @objc
     func tappedSecurityButton() {
-        
-        if signInView.passwordTextField.isSecureTextEntry {
-            signInView.passwordTextField.isSecureTextEntry = false
-        } else {
-            signInView.passwordTextField.isSecureTextEntry = true
-        }
+        signInView.passwordTextField.isSecureTextEntry = !signInView.passwordTextField.isSecureTextEntry
     }
     
-    @objc
-    func tappedLogInButton() {
-        let welcomeVC = WelcomeViewController()
-        navigationController?.pushViewController(welcomeVC, animated: true)
-    }
-    
+    /// 두 텍스트 필드 모두 차있으면, 로그인 버튼 활성화
     func checkTextField() {
         if isIDTextFieldFull && isPWTextFieldFull {
             signInView.loginButton.layer.borderColor = UIColor.primary.cgColor
@@ -117,5 +105,12 @@ class SignInViewController: UIViewController {
             signInView.loginButton.setTitleColor(.gray2, for: .normal)
             signInView.loginButton.isEnabled = false
         }
+    }
+    
+    @objc
+    func tappedLogInButton() {
+        let welcomeVC = WelcomeViewController()
+        welcomeVC.setUserName(name: signInView.idTextField.text ?? "")
+        navigationController?.pushViewController(welcomeVC, animated: true)
     }
 }
