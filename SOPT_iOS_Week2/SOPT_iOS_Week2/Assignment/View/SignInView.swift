@@ -39,8 +39,10 @@ class SignInView: UIView {
         textField.autocapitalizationType = .none
         textField.setPlaceholderColor(.gray2)
         textField.setLeftPaddingPoints(22)
-        textField.borderStyle = .roundedRect
         textField.clearButtonMode = .whileEditing
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.cornerRadius = 3
         return textField
     }()
     
@@ -52,10 +54,12 @@ class SignInView: UIView {
         textField.textColor = .gray2
         textField.isSecureTextEntry = true
         textField.autocapitalizationType = .none
-        textField.borderStyle = .roundedRect
         textField.rightView?.frame = CGRect(x: 0, y: 0, width: 60, height: 30)
         textField.setPlaceholderColor(.gray2)
         textField.setLeftPaddingPoints(22)
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.clear.cgColor
+        textField.layer.cornerRadius = 3
         return textField
     }()
     

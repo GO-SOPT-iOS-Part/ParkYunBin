@@ -42,16 +42,45 @@ class SignInViewController: UIViewController {
         }
     }
     
+    // FIXME: - 한 textField 당 컨트롤 이벤트를 다르게 지정해서 액션 함수를 3개나 달아두는게 좋은 방법일까요??
+    
     func setActionEvent() {
-        signInView.idTextField.addTarget(self, action: #selector(editIDTextField), for: .editingChanged)
-        signInView.passwordTextField.addTarget(self, action: #selector(editPasswordTextField), for: .editingChanged)
+        signInView.idTextField.addTarget(self, action: #selector(userWriteIDTextField), for: .editingChanged)
+        signInView.idTextField.addTarget(self, action: #selector(finishWriting), for: .editingDidEnd)
+        signInView.idTextField.addTarget(self, action: #selector(startWriting), for: .editingDidBegin)
+        signInView.passwordTextField.addTarget(self, action: #selector(userWritePWTextField), for: .editingChanged)
+        signInView.passwordTextField.addTarget(self, action: #selector(finishWriting), for: .editingDidEnd)
+        signInView.passwordTextField.addTarget(self, action: #selector(startWriting), for: .editingDidBegin)
         signInView.removeButton.addTarget(self, action: #selector(tappedRemoveButton), for: .touchUpInside)
         signInView.securityButton.addTarget(self, action: #selector(tappedSecurityButton), for: .touchUpInside)
         signInView.loginButton.addTarget(self, action: #selector(tappedLogInButton), for: .touchUpInside)
     }
     
+    func hideButtons() {
+        signInView.securityButton.isHidden = true
+        signInView.removeButton.isHidden = true
+    }
+    
+    func showButtons() {
+        signInView.securityButton.isHidden = false
+        signInView.removeButton.isHidden = false
+    }
+    
     @objc
-    func editIDTextField(sender: UITextField) {
+    func startWriting(sender: UITextField) {
+        sender.layer.borderColor = UIColor.gray2.cgColor
+    }
+    
+    @objc
+    func finishWriting(sender: UITextField) {
+        sender.layer.borderColor = UIColor.clear.cgColor
+        if(sender == signInView.passwordTextField) {
+            hideButtons()
+        }
+    }
+    
+    @objc
+    func userWriteIDTextField(sender: UITextField) {
         if sender.text?.isEmpty == true {
             isIDTextFieldFull = false
             checkTextField()
@@ -62,27 +91,16 @@ class SignInViewController: UIViewController {
     }
     
     @objc
-    func editPasswordTextField(sender: UITextField) {
+    func userWritePWTextField(sender: UITextField) {
         if sender.text?.isEmpty == true {
-            signInView.securityButton.isHidden = true
-            signInView.removeButton.isHidden = true
+            hideButtons()
             isPWTextFieldFull = false
             checkTextField()
         } else {
-            signInView.securityButton.isHidden = false
-            signInView.removeButton.isHidden = false
+            showButtons()
             isPWTextFieldFull = true
             checkTextField()
         }
-    }
-    
-    @objc
-    func tappedRemoveButton() {
-        signInView.passwordTextField.text = ""
-        signInView.securityButton.isHidden = true
-        signInView.removeButton.isHidden = true
-        isPWTextFieldFull = false
-        checkTextField()
     }
     
     // FIXME: - isSecureTextEntry의 bool값이 한번 변경되고 나서 입력을 다시 진행하면, textfield의 값이 초기화되는데, 어떻게 해결하는지 모르겠음..
@@ -105,6 +123,14 @@ class SignInViewController: UIViewController {
             signInView.loginButton.setTitleColor(.gray2, for: .normal)
             signInView.loginButton.isEnabled = false
         }
+    }
+    
+    @objc
+    func tappedRemoveButton() {
+        signInView.passwordTextField.text = ""
+        hideButtons()
+        isPWTextFieldFull = false
+        checkTextField()
     }
     
     @objc
