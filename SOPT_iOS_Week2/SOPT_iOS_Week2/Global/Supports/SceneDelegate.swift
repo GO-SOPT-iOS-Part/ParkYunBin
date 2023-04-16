@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 2.
         self.window = UIWindow(windowScene: windowScene)
         // 3.
-        let navigationController = UINavigationController(rootViewController: SignInViewController())
+        let navigationController = UINavigationController(rootViewController: WelcomeViewController())
         self.window?.rootViewController = navigationController ///스택의 최하위 부분 설정
         // 4. 화면이 나오게 해주는 코드
         self.window?.makeKeyAndVisible()
