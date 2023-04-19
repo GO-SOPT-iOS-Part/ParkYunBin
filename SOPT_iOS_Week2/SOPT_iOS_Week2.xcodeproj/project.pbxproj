@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				05B202A729E681120042060C /* View */,
-				05B202A629E681070042060C /* VIewController */,
+				05B202A629E681070042060C /* ViewController */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -181,13 +181,13 @@
 			path = Literal;
 			sourceTree = "<group>";
 		};
-		05B202A629E681070042060C /* VIewController */ = {
+		05B202A629E681070042060C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				05B2029529E42ED90042060C /* SignInViewController.swift */,
 				05B202AE29EAA9780042060C /* WelcomeViewController.swift */,
 			);
-			path = VIewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		05B202A729E681120042060C /* View */ = {

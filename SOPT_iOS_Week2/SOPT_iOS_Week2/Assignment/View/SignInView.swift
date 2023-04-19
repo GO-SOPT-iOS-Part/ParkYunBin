@@ -24,9 +24,7 @@ class SignInView: UIView {
         label.font = .medium(size: 23)
         return label
     }()
-    
-    // FIXME: clearButton의 이미지를 변경하는 코드를 어떻게 깔끔하게 쓰지요,,,?!
-    
+        
     lazy var idTextField: UITextField = {
         let textField = UITextField()
         if let clearButton = textField.value(forKeyPath: "_clearButton") as? UIButton {
@@ -159,7 +157,6 @@ class SignInView: UIView {
     // MARK: - Functions
     
     func configureUI() {
-        
         self.addSubviews(backButton,
                          loginLabel,
                          idTextField,
@@ -172,7 +169,6 @@ class SignInView: UIView {
     }
     
     func setLayout() {
-        
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(65)
             make.leading.equalToSuperview().offset(24)

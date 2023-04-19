@@ -7,13 +7,13 @@
 
 import UIKit
 
-import SnapKit 
+import SnapKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var username = "gosopt@naver.com"
+    private lazy var username = ""
     
     // MARK: - UI Components
     
