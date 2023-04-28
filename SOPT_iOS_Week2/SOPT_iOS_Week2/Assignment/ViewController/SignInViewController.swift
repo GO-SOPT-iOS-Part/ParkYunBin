@@ -125,7 +125,7 @@ final class SignInViewController: UIViewController {
     
     @objc
     func tappedSecurityButton() {
-        signInView.passwordTextField.isSecureTextEntry = !signInView.passwordTextField.isSecureTextEntry
+        signInView.passwordTextField.isSecureTextEntry.toggle()
     }
     
     @objc
