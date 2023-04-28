@@ -103,11 +103,10 @@ final class SignInViewController: UIViewController {
     func userWriteIDTextField(sender: UITextField) {
         if sender.text?.isEmpty == true {
             isIDTextFieldFull = false
-            checkTextField()
         } else {
             isIDTextFieldFull = true
-            checkTextField()
         }
+        checkTextField()
     }
     
     @objc
