@@ -115,12 +115,11 @@ final class SignInViewController: UIViewController {
         if sender.text?.isEmpty == true {
             hideButtons()
             isPWTextFieldFull = false
-            checkTextField()
         } else {
             showButtons()
             isPWTextFieldFull = true
-            checkTextField()
         }
+        checkTextField()
     }
     
     // FIXME: - isSecureTextEntry의 bool값이 한번 변경되고 나서 입력을 다시 진행하면, textfield의 값이 초기화되는데, 어떻게 해결하는지 모르겠음..
