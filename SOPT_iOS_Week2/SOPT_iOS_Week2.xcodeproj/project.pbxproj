@@ -30,6 +30,7 @@
 		05B202A929E6812E0042060C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202A829E6812E0042060C /* SignInView.swift */; };
 		05B202AB29E686A00042060C /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202AA29E686A00042060C /* UIButton+.swift */; };
 		05B202AF29EAA9780042060C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B202AE29EAA9780042060C /* WelcomeViewController.swift */; };
+		05C5EB2D2A02CCFF00CC6A58 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB2C2A02CCFF00CC6A58 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		05B202A829E6812E0042060C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		05B202AA29E686A00042060C /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		05B202AE29EAA9780042060C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		05C5EB2C2A02CCFF00CC6A58 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				05B202A829E6812E0042060C /* SignInView.swift */,
+				05C5EB2C2A02CCFF00CC6A58 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				05B202A929E6812E0042060C /* SignInView.swift in Sources */,
 				05B202AB29E686A00042060C /* UIButton+.swift in Sources */,
 				05B2028029E147160042060C /* PracticeDelegateViewController_Second.swift in Sources */,
+				05C5EB2D2A02CCFF00CC6A58 /* WelcomeView.swift in Sources */,
 				05B2029829E431250042060C /* UITextField+.swift in Sources */,
 				05B2026029E132D90042060C /* SceneDelegate.swift in Sources */,
 				05B2028E29E42BB50042060C /* UIColor+.swift in Sources */,
