@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class PracticeDelegateViewController: UIViewController {
+final class PracticeDelegateViewController_First: UIViewController {
     
     private lazy var resultLabel = UILabel().then {
         $0.text = "조금 더 눌라바.."
@@ -21,7 +21,8 @@ final class PracticeDelegateViewController: UIViewController {
     private lazy var nextButton = UIButton().then {
         $0.setTitle("다음으로!", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .systemBlue
+        $0.layer.cornerRadius = 10
     }
         
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ final class PracticeDelegateViewController: UIViewController {
     }
 }
 
-extension PracticeDelegateViewController {
+extension PracticeDelegateViewController_First {
     
     func addComponent() {
         [resultLabel, nextButton].forEach{
@@ -41,6 +42,7 @@ extension PracticeDelegateViewController {
     }
     
     func setLayout() {
+        
         view.backgroundColor = .systemBackground
         
         resultLabel.snp.makeConstraints { make in
@@ -50,6 +52,8 @@ extension PracticeDelegateViewController {
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(resultLabel.snp.bottom).offset(10)
             make.centerX.equalTo(resultLabel)
+            make.height.equalTo(40)
+            make.width.equalTo(100)
         }
     }
     
@@ -59,14 +63,14 @@ extension PracticeDelegateViewController {
     
     @objc
     func tappedNextButton() {
-        let secondViewController = SecondPracticeViewController()
-        secondViewController.modalPresentationStyle = .formSheet
+        let secondViewController = PracticeDelegateViewController_Second()
+        secondViewController.modalPresentationStyle = .fullScreen
         secondViewController.delegate = self
         self.present(secondViewController, animated: true)
     }
 }
 
-extension PracticeDelegateViewController: DataBindProtocol {
+extension PracticeDelegateViewController_First: DataBindProtocol {
     func dataBind(count: Int) {
         resultLabel.text = "조금 더 눌러바 ... \(String(count))"
     }
