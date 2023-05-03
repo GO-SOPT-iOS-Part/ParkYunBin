@@ -55,14 +55,14 @@ final class WelcomeViewController: UIViewController {
     
     // MARK: - Functions
     
-    func configureUI() {
+    private func configureUI() {
         view.backgroundColor = .black
         view.addSubviews(tvingImageView,
                          welcomeUserLabel,
                          goMainButton)
     }
     
-    func setLayout() {
+    private func setLayout() {
         tvingImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(58)
             make.leading.trailing.equalToSuperview()
@@ -86,7 +86,7 @@ final class WelcomeViewController: UIViewController {
         username = name
     }
     
-    func setNavigationBar() {
+    private func setNavigationBar() {
         navigationController?.isNavigationBarHidden = true
     }
 }

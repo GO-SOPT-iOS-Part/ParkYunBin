@@ -156,7 +156,7 @@ class SignInView: UIView {
     
     // MARK: - Functions
     
-    func configureUI() {
+    private func configureUI() {
         self.addSubviews(backButton,
                          loginLabel,
                          idTextField,
@@ -168,7 +168,7 @@ class SignInView: UIView {
                          securityButton)
     }
     
-    func setLayout() {
+    private func setLayout() {
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(65)
             make.leading.equalToSuperview().offset(24)

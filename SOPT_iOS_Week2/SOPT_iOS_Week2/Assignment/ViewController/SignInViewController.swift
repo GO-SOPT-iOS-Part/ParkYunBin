@@ -32,11 +32,11 @@ final class SignInViewController: UIViewController {
     
     // MARK: - Functions
 
-    func configureUI() {
+    private func configureUI() {
         view.addSubview(signInView)
     }
     
-    func setLayout() {
+    private func setLayout() {
         signInView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -44,7 +44,7 @@ final class SignInViewController: UIViewController {
     
     // FIXME: - 한 textField 당 컨트롤 이벤트를 다르게 지정해서 액션 함수를 3개나 달아두는게 좋은 방법일까요?? 지양해야하는 방법이라면, 함수를 어떻게 수정할 수 있을까요..
     
-    func setActionEvent() {
+    private func setActionEvent() {
         signInView.idTextField.addTarget(self, action: #selector(userWriteIDTextField), for: .editingChanged)
         signInView.idTextField.addTarget(self, action: #selector(finishWriting), for: .editingDidEnd)
         signInView.idTextField.addTarget(self, action: #selector(startWriting), for: .editingDidBegin)
@@ -58,18 +58,18 @@ final class SignInViewController: UIViewController {
         signInView.loginButton.addTarget(self, action: #selector(tappedLogInButton), for: .touchUpInside)
     }
     
-    func hideButtons() {
+    private func hideButtons() {
         signInView.securityButton.isHidden = true
         signInView.removeButton.isHidden = true
     }
     
-    func showButtons() {
+    private func showButtons() {
         signInView.securityButton.isHidden = false
         signInView.removeButton.isHidden = false
     }
     
     /// 두 텍스트 필드 모두 차있으면, 로그인 버튼 활성화
-    func checkTextField() {
+    private func checkTextField() {
         if isIDTextFieldFull && isPWTextFieldFull {
             signInView.loginButton.layer.borderColor = UIColor.primary.cgColor
             signInView.loginButton.backgroundColor = .primary
@@ -84,7 +84,7 @@ final class SignInViewController: UIViewController {
     }
     
     @objc
-    func startWriting(sender: UITextField) {
+    private func startWriting(sender: UITextField) {
         sender.layer.borderColor = UIColor.gray2.cgColor
         if(sender == signInView.passwordTextField) {
             showButtons()
@@ -92,7 +92,7 @@ final class SignInViewController: UIViewController {
     }
     
     @objc
-    func finishWriting(sender: UITextField) {
+    private func finishWriting(sender: UITextField) {
         sender.layer.borderColor = UIColor.clear.cgColor
         if(sender == signInView.passwordTextField) {
             hideButtons()
@@ -100,7 +100,7 @@ final class SignInViewController: UIViewController {
     }
     
     @objc
-    func userWriteIDTextField(sender: UITextField) {
+    private func userWriteIDTextField(sender: UITextField) {
         if sender.text?.isEmpty == true {
             isIDTextFieldFull = false
         } else {
@@ -110,7 +110,7 @@ final class SignInViewController: UIViewController {
     }
     
     @objc
-    func userWritePWTextField(sender: UITextField) {
+    private func userWritePWTextField(sender: UITextField) {
         if sender.text?.isEmpty == true {
             hideButtons()
             isPWTextFieldFull = false
@@ -124,12 +124,12 @@ final class SignInViewController: UIViewController {
     // FIXME: - isSecureTextEntry의 bool값이 한번 변경되고 나서 입력을 다시 진행하면, textfield의 값이 초기화되는데, 어떻게 해결하는지 모르겠음..
     
     @objc
-    func tappedSecurityButton() {
+    private func tappedSecurityButton() {
         signInView.passwordTextField.isSecureTextEntry.toggle()
     }
     
     @objc
-    func tappedRemoveButton() {
+    private func tappedRemoveButton() {
         signInView.passwordTextField.text = ""
         hideButtons()
         isPWTextFieldFull = false
@@ -137,7 +137,7 @@ final class SignInViewController: UIViewController {
     }
     
     @objc
-    func tappedLogInButton() {
+    private func tappedLogInButton() {
         let welcomeVC = WelcomeViewController()
         welcomeVC.setUserName(name: signInView.idTextField.text ?? "")
         navigationController?.pushViewController(welcomeVC, animated: true)
