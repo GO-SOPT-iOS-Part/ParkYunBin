@@ -27,6 +27,8 @@
 		05C5EB752A02DBB800CC6A58 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB742A02DBB800CC6A58 /* WelcomeView.swift */; };
 		05C5EB782A02DC0D00CC6A58 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 05C5EB772A02DC0D00CC6A58 /* SnapKit */; };
 		05C5EB7E2A02DCEF00CC6A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB7D2A02DCEF00CC6A58 /* HomeViewController.swift */; };
+		05C5EB812A038DBE00CC6A58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB802A038DBE00CC6A58 /* BaseViewController.swift */; };
+		05C5EB852A038DE000CC6A58 /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB842A038DE000CC6A58 /* BaseUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		05C5EB722A02DBA100CC6A58 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		05C5EB742A02DBB800CC6A58 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		05C5EB7D2A02DCEF00CC6A58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05C5EB802A038DBE00CC6A58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		05C5EB842A038DE000CC6A58 /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		05C5EB4E2A02D96D00CC6A58 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				05C5EB7F2A038D8500CC6A58 /* Base */,
 				05C5EB522A02D9A300CC6A58 /* Literal */,
 				05C5EB512A02D99C00CC6A58 /* Extension */,
 				05C5EB502A02D99400CC6A58 /* Resource */,
@@ -196,6 +201,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		05C5EB7F2A038D8500CC6A58 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				05C5EB802A038DBE00CC6A58 /* BaseViewController.swift */,
+				05C5EB842A038DE000CC6A58 /* BaseUIView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +295,8 @@
 				05C5EB3B2A02D86A00CC6A58 /* AppDelegate.swift in Sources */,
 				05C5EB672A02DAFE00CC6A58 /* UIFont+.swift in Sources */,
 				05C5EB6B2A02DB2B00CC6A58 /* FontLiteral.swift in Sources */,
+				05C5EB852A038DE000CC6A58 /* BaseUIView.swift in Sources */,
+				05C5EB812A038DBE00CC6A58 /* BaseViewController.swift in Sources */,
 				05C5EB732A02DBA100CC6A58 /* SignInView.swift in Sources */,
 				05C5EB752A02DBB800CC6A58 /* WelcomeView.swift in Sources */,
 				05C5EB652A02DAEC00CC6A58 /* UITextField+.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class SignInViewController: UIViewController {
+final class SignInViewController: BaseViewController {
     
     // MARK: - Properties
     
@@ -20,23 +20,13 @@ final class SignInViewController: UIViewController {
     
     private lazy var signInView = SignInView()
     
-    
-    // MARK: - Life Cycles
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureUI()
-        setLayout()
-        setActionEvent()
-    }
-    
     // MARK: - Functions
 
-    private func configureUI() {
+    override func configureUI() {
         view.addSubview(signInView)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         signInView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -44,7 +34,7 @@ final class SignInViewController: UIViewController {
     
     // FIXME: - 한 textField 당 컨트롤 이벤트를 다르게 지정해서 액션 함수를 3개나 달아두는게 좋은 방법일까요?? 지양해야하는 방법이라면, 함수를 어떻게 수정할 수 있을까요..
     
-    private func setActionEvent() {
+    override func setButtonEvent() {
         signInView.idTextField.addTarget(self, action: #selector(userWriteIDTextField), for: .editingChanged)
         signInView.idTextField.addTarget(self, action: #selector(finishWriting), for: .editingDidEnd)
         signInView.idTextField.addTarget(self, action: #selector(startWriting), for: .editingDidBegin)

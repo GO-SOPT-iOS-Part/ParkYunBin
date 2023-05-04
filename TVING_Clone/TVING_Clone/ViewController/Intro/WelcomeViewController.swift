@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class WelcomeViewController: UIViewController {
+final class WelcomeViewController: BaseViewController {
     
     // MARK: - UI Components
     
@@ -19,26 +19,23 @@ final class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
-        setLayout()
-        setActionEvent()
         setNavigationBar()
     }
     
     // MARK: - Functions
     
-    private func configureUI() {
+    override func configureUI() {
         view.backgroundColor = .black
         view.addSubviews(welcomeView)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         welcomeView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
-    private func setActionEvent() {
+    override func setButtonEvent() {
         welcomeView.goMainButton.addTarget(self, action: #selector(tappedMypageButton), for: .touchUpInside)
     }
     

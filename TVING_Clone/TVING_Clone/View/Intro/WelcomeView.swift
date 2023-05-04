@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeView: UIView {
+class WelcomeView: BaseUIView {
     
     // MARK: - UI Components
     
@@ -36,27 +36,16 @@ class WelcomeView: UIView {
         button.layer.cornerRadius = 3
         return button
     }()
-
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureUI()
-        setLayout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - Functions
     
-    private func configureUI() {
+    override func configureUI() {
         self.addSubviews(tvingImageView,
                          welcomeUserLabel,
                          goMainButton)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         tvingImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(58)
             make.leading.trailing.equalToSuperview()

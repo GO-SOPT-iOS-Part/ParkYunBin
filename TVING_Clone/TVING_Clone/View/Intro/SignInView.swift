@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInView: UIView {
+class SignInView: BaseUIView {
     
     // MARK: - UI Components
     
@@ -144,19 +144,9 @@ class SignInView: UIView {
         return button
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureUI()
-        setLayout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     // MARK: - Functions
     
-    private func configureUI() {
+    override func configureUI() {
         self.addSubviews(backButton,
                          loginLabel,
                          idTextField,
@@ -168,7 +158,7 @@ class SignInView: UIView {
                          securityButton)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         backButton.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(65)
             make.leading.equalToSuperview().offset(24)
