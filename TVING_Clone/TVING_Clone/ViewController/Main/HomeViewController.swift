@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
     
     // MARK: - UI Components
     
@@ -23,27 +23,29 @@ final class HomeViewController: UIViewController {
         return button
     }()
     
-    // MARK: - Life Cycles
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureUI()
-        setLayout()
-    }
-    
     // MARK: - Functions
     
-    private func configureUI() {
+    override func configureUI() {
         view.backgroundColor = .black
         view.addSubviews(goMyPageButton)
     }
     
-    private func setLayout() {
+    override func setLayout() {
         goMyPageButton.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(60)
         }
+    }
+    
+    override func setButtonEvent() {
+        goMyPageButton.addTarget(self, action: #selector(tappedMyPageButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func tappedMyPageButton() {
+        let myPageVC = MyPageViewController()
+        navigationController?.pushViewController(myPageVC, animated: true)
     }
 }
 

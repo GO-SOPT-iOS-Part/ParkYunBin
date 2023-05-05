@@ -12,21 +12,25 @@ extension UIColor {
     static var primary: UIColor {
         return UIColor(hex: "#FF143C")
     }
-    
-    static var gray4: UIColor {
-        return UIColor(hex: "#2E2E2E")
+
+    static var gray1: UIColor {
+        return UIColor(hex: "#D6D6D6")
+    }
+
+    static var gray2: UIColor {
+        return UIColor(hex: "#9C9C9C")
     }
     
     static var gray3: UIColor {
         return UIColor(hex: "#626262")
     }
     
-    static var gray2: UIColor {
-        return UIColor(hex: "#9C9C9C")
+    static var gray4: UIColor {
+        return UIColor(hex: "#2E2E2E")
     }
     
-    static var gray1: UIColor {
-        return UIColor(hex: "#D6D6D6")
+    static var gray5: UIColor {
+        return UIColor(hex: "#191919")
     }
     
 }

@@ -29,6 +29,15 @@
 		05C5EB7E2A02DCEF00CC6A58 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB7D2A02DCEF00CC6A58 /* HomeViewController.swift */; };
 		05C5EB812A038DBE00CC6A58 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB802A038DBE00CC6A58 /* BaseViewController.swift */; };
 		05C5EB852A038DE000CC6A58 /* BaseUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB842A038DE000CC6A58 /* BaseUIView.swift */; };
+		05C5EB892A03932600CC6A58 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB882A03932600CC6A58 /* MyPageViewController.swift */; };
+		05C5EB8D2A03E8C700CC6A58 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB8C2A03E8C700CC6A58 /* MyPage.swift */; };
+		05C5EB8F2A03EDB800CC6A58 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB8E2A03EDB800CC6A58 /* UIImage+.swift */; };
+		05C5EB922A03F43300CC6A58 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB912A03F43300CC6A58 /* MyPageTableViewCell.swift */; };
+		05C5EB942A050F3C00CC6A58 /* HeaderTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB932A050F3C00CC6A58 /* HeaderTopView.swift */; };
+		05C5EB962A051A0300CC6A58 /* MyPageFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB952A051A0300CC6A58 /* MyPageFooterView.swift */; };
+		05C5EB982A051D8500CC6A58 /* HeaderMiddleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB972A051D8400CC6A58 /* HeaderMiddleView.swift */; };
+		05C5EB9A2A0525F800CC6A58 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB992A0525F800CC6A58 /* UILabel+.swift */; };
+		05C5EB9C2A05274000CC6A58 /* HeaderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EB9B2A05274000CC6A58 /* HeaderBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +64,15 @@
 		05C5EB7D2A02DCEF00CC6A58 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		05C5EB802A038DBE00CC6A58 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		05C5EB842A038DE000CC6A58 /* BaseUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIView.swift; sourceTree = "<group>"; };
+		05C5EB882A03932600CC6A58 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		05C5EB8C2A03E8C700CC6A58 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		05C5EB8E2A03EDB800CC6A58 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		05C5EB912A03F43300CC6A58 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		05C5EB932A050F3C00CC6A58 /* HeaderTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTopView.swift; sourceTree = "<group>"; };
+		05C5EB952A051A0300CC6A58 /* MyPageFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageFooterView.swift; sourceTree = "<group>"; };
+		05C5EB972A051D8400CC6A58 /* HeaderMiddleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderMiddleView.swift; sourceTree = "<group>"; };
+		05C5EB992A0525F800CC6A58 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		05C5EB9B2A05274000CC6A58 /* HeaderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +106,7 @@
 		05C5EB392A02D86A00CC6A58 /* TVING_Clone */ = {
 			isa = PBXGroup;
 			children = (
+				05C5EB8A2A03E8A300CC6A58 /* Model */,
 				05C5EB6D2A02DB6B00CC6A58 /* ViewController */,
 				05C5EB6C2A02DB6400CC6A58 /* View */,
 				05C5EB4E2A02D96D00CC6A58 /* Global */,
@@ -135,6 +154,8 @@
 				05C5EB642A02DAEC00CC6A58 /* UITextField+.swift */,
 				05C5EB662A02DAFE00CC6A58 /* UIFont+.swift */,
 				05C5EB682A02DB1600CC6A58 /* UIButton+.swift */,
+				05C5EB8E2A03EDB800CC6A58 /* UIImage+.swift */,
+				05C5EB992A0525F800CC6A58 /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -161,6 +182,7 @@
 		05C5EB6C2A02DB6400CC6A58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05C5EB902A03F40B00CC6A58 /* Main */,
 				05C5EB792A02DC8400CC6A58 /* Intro */,
 			);
 			path = View;
@@ -197,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				05C5EB7D2A02DCEF00CC6A58 /* HomeViewController.swift */,
+				05C5EB882A03932600CC6A58 /* MyPageViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -208,6 +231,26 @@
 				05C5EB842A038DE000CC6A58 /* BaseUIView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		05C5EB8A2A03E8A300CC6A58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05C5EB8C2A03E8C700CC6A58 /* MyPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05C5EB902A03F40B00CC6A58 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				05C5EB912A03F43300CC6A58 /* MyPageTableViewCell.swift */,
+				05C5EB932A050F3C00CC6A58 /* HeaderTopView.swift */,
+				05C5EB972A051D8400CC6A58 /* HeaderMiddleView.swift */,
+				05C5EB9B2A05274000CC6A58 /* HeaderBottomView.swift */,
+				05C5EB952A051A0300CC6A58 /* MyPageFooterView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,17 +335,26 @@
 			files = (
 				05C5EB612A02DAC200CC6A58 /* UIColor+.swift in Sources */,
 				05C5EB712A02DB9000CC6A58 /* WelcomeViewController.swift in Sources */,
+				05C5EB9C2A05274000CC6A58 /* HeaderBottomView.swift in Sources */,
 				05C5EB3B2A02D86A00CC6A58 /* AppDelegate.swift in Sources */,
+				05C5EB962A051A0300CC6A58 /* MyPageFooterView.swift in Sources */,
 				05C5EB672A02DAFE00CC6A58 /* UIFont+.swift in Sources */,
 				05C5EB6B2A02DB2B00CC6A58 /* FontLiteral.swift in Sources */,
 				05C5EB852A038DE000CC6A58 /* BaseUIView.swift in Sources */,
 				05C5EB812A038DBE00CC6A58 /* BaseViewController.swift in Sources */,
+				05C5EB892A03932600CC6A58 /* MyPageViewController.swift in Sources */,
+				05C5EB922A03F43300CC6A58 /* MyPageTableViewCell.swift in Sources */,
+				05C5EB9A2A0525F800CC6A58 /* UILabel+.swift in Sources */,
 				05C5EB732A02DBA100CC6A58 /* SignInView.swift in Sources */,
+				05C5EB982A051D8500CC6A58 /* HeaderMiddleView.swift in Sources */,
 				05C5EB752A02DBB800CC6A58 /* WelcomeView.swift in Sources */,
+				05C5EB8D2A03E8C700CC6A58 /* MyPage.swift in Sources */,
 				05C5EB652A02DAEC00CC6A58 /* UITextField+.swift in Sources */,
 				05C5EB3D2A02D86A00CC6A58 /* SceneDelegate.swift in Sources */,
+				05C5EB942A050F3C00CC6A58 /* HeaderTopView.swift in Sources */,
 				05C5EB632A02DAD800CC6A58 /* UIView+.swift in Sources */,
 				05C5EB6F2A02DB7C00CC6A58 /* SignInViewController.swift in Sources */,
+				05C5EB8F2A03EDB800CC6A58 /* UIImage+.swift in Sources */,
 				05C5EB7E2A02DCEF00CC6A58 /* HomeViewController.swift in Sources */,
 				05C5EB692A02DB1600CC6A58 /* UIButton+.swift in Sources */,
 			);
