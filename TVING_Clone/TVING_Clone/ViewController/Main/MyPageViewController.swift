@@ -94,10 +94,10 @@ class MyPageViewController: BaseViewController {
     
     func customNavigationBar() {
         navigationController?.navigationBar.tintColor = .gray1
-        navigationController?.navigationBar.barTintColor = .black
         let backButton: UIBarButtonItem = UIBarButtonItem()
         backButton.title = ""
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        navigationController?.navigationBar.isTranslucent = false
     }
 }
 
