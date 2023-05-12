@@ -34,21 +34,21 @@ final class MainViewController: UIViewController {
         getDailyMovie()
     }
     
-    func register() {
+    private func register() {
         dailyMovieTableView.register(DailyMovieTableViewCell.self, forCellReuseIdentifier: DailyMovieTableViewCell.cellIdentifier)
     }
     
-    func configureUI() {
+    private func configureUI() {
         view.addSubview(dailyMovieTableView)
     }
     
-    func setLayout() {
+    private func setLayout() {
         dailyMovieTableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
     
-    func setTableView() {
+    private func setTableView() {
         dailyMovieTableView.delegate = self
         dailyMovieTableView.dataSource = self
     }

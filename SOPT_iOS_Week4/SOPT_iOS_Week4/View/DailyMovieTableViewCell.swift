@@ -14,7 +14,7 @@ final class DailyMovieTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    var imageURL: URL?
+    private var imageURL: URL?
     
     // MARK: - UI Components
     
@@ -63,14 +63,14 @@ final class DailyMovieTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     
-    func configureUI() {
+    private func configureUI() {
         contentView.addSubviews(posterImage,
                                 movieTitleLabel,
                                 overViewLabel,
                                 releaseDateLabel)
     }
     
-    func setLayout() {
+    private func setLayout() {
         posterImage.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(15)
             make.trailing.equalToSuperview().inset(6)
