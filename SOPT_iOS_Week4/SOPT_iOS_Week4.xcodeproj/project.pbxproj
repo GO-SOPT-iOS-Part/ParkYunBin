@@ -19,6 +19,9 @@
 		05C5EBC82A06281C00CC6A58 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5EBC72A06281C00CC6A58 /* NetworkResult.swift */; };
 		05EC83092A0CCEDA00851B55 /* DailyMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC83082A0CCEDA00851B55 /* DailyMovieTableViewCell.swift */; };
 		05EC830B2A0D261E00851B55 /* DailyMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC830A2A0D261E00851B55 /* DailyMovieResponse.swift */; };
+		05EC830E2A0D356D00851B55 /* UIVIew+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC830D2A0D356D00851B55 /* UIVIew+.swift */; };
+		05EC83102A0D368E00851B55 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC830F2A0D368E00851B55 /* UITableViewCell+.swift */; };
+		05EC83132A0D39E000851B55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05EC83122A0D39E000851B55 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,8 @@
 		05C5EBC72A06281C00CC6A58 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		05EC83082A0CCEDA00851B55 /* DailyMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMovieTableViewCell.swift; sourceTree = "<group>"; };
 		05EC830A2A0D261E00851B55 /* DailyMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMovieResponse.swift; sourceTree = "<group>"; };
+		05EC830D2A0D356D00851B55 /* UIVIew+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+.swift"; sourceTree = "<group>"; };
+		05EC830F2A0D368E00851B55 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05EC83132A0D39E000851B55 /* Kingfisher in Frameworks */,
 				05C5EBBF2A06232600CC6A58 /* Alamofire in Frameworks */,
 				05C5EBC22A06233C00CC6A58 /* SnapKit in Frameworks */,
 			);
@@ -107,6 +113,7 @@
 		05EC83052A0CCC3500851B55 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				05EC830C2A0D355E00851B55 /* Extension */,
 				05EC83072A0CCC8800851B55 /* Resource */,
 				05EC83062A0CCC7A00851B55 /* Support */,
 			);
@@ -131,6 +138,15 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		05EC830C2A0D355E00851B55 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05EC830D2A0D356D00851B55 /* UIVIew+.swift */,
+				05EC830F2A0D368E00851B55 /* UITableViewCell+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +166,7 @@
 			packageProductDependencies = (
 				05C5EBBE2A06232600CC6A58 /* Alamofire */,
 				05C5EBC12A06233C00CC6A58 /* SnapKit */,
+				05EC83122A0D39E000851B55 /* Kingfisher */,
 			);
 			productName = SOPT_iOS_Week4;
 			productReference = 05C5EBA62A06227100CC6A58 /* SOPT_iOS_Week4.app */;
@@ -182,6 +199,7 @@
 			packageReferences = (
 				05C5EBBD2A06232600CC6A58 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				05C5EBC02A06233C00CC6A58 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				05EC83112A0D39E000851B55 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 05C5EBA72A06227100CC6A58 /* Products */;
 			projectDirPath = "";
@@ -211,6 +229,8 @@
 			files = (
 				05C5EBAE2A06227100CC6A58 /* MainViewController.swift in Sources */,
 				05C5EBC62A06261A00CC6A58 /* DailyMovieService.swift in Sources */,
+				05EC830E2A0D356D00851B55 /* UIVIew+.swift in Sources */,
+				05EC83102A0D368E00851B55 /* UITableViewCell+.swift in Sources */,
 				05C5EBC42A06240A00CC6A58 /* Config.swift in Sources */,
 				05C5EBC82A06281C00CC6A58 /* NetworkResult.swift in Sources */,
 				05EC830B2A0D261E00851B55 /* DailyMovieResponse.swift in Sources */,
@@ -444,6 +464,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		05EC83112A0D39E000851B55 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -456,6 +484,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05C5EBC02A06233C00CC6A58 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		05EC83122A0D39E000851B55 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05EC83112A0D39E000851B55 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
