@@ -9,6 +9,8 @@ import UIKit
 
 final class MainViewController: UIViewController {
     
+    // MARK: - Properties
+    
     private var responseData: [Results] = []
     
     // MARK: - UI Components
@@ -18,11 +20,6 @@ final class MainViewController: UIViewController {
         tableView.rowHeight = 200
         return tableView
     }()
-    
-    override func loadView() {
-        super.loadView()
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +31,13 @@ final class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         getDailyMovie()
     }
+    
     func register() {
         dailyMovieTableView.register(DailyMovieTableViewCell.self, forCellReuseIdentifier: DailyMovieTableViewCell.cellIdentifier)
     }
+    
     func configureUI() {
         view.addSubview(dailyMovieTableView)
     }
@@ -63,7 +61,7 @@ final class MainViewController: UIViewController {
                 self.responseData = data.results
                 self.dailyMovieTableView.reloadData()
             default:
-                print("beep")
+                return
             }
         }
     }
@@ -83,6 +81,4 @@ extension MainViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
